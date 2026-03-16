@@ -1,0 +1,26 @@
+{
+  "name": "practice-software-testing",
+  "version": "1.0.0",
+  "description": "E2E tests for Practice Software Testing (Toolshop) using Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:auth": "playwright test tests/auth",
+    "test:products": "playwright test tests/products",
+    "test:checkout": "playwright test tests/checkout",
+    "test:bug": "ENV=bug npm test",
+    "test:v4": "ENV=v4 npm test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
